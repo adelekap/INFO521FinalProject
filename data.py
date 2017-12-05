@@ -45,7 +45,6 @@ key['Rat ID'] = watermazeAvgs.index.values
 allData = pd.merge(allData,temp,on='Rat ID')
 allData = pd.merge(allData,key,on='Rat ID')
 
-print('d')
 
 
 
