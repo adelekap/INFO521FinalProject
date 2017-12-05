@@ -1,14 +1,19 @@
 import data
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
-import seaborn as sns
-from mpl_toolkits.mplot3d import Axes3D
-import itertools
-import numpy as np
+
 
 dir = 'Figures/'
 
 def set_colors(data,model,age=True):
+    """
+    Sets the coloring based on the groups that the model assigns.
+    Green is low performing, blue is average performing, and red is low performing.
+    :param data: dataframe of cleaned data
+    :param model: kmeans model
+    :param age: if age is included in the model
+    :return: dataframe with colors in 'Group' column
+    """
     data['Group'] = model.labels_
     column_name = 'Group'
     if age:
@@ -23,6 +28,13 @@ def set_colors(data,model,age=True):
 
 
 def plot_cluster_results(data,title,file):
+    """
+    Plots the results of the kmeans model
+    :param data: dataframe of cleaned data
+    :param title: the title of the figure
+    :param file: the filename to save the figure as
+    :return: None
+    """
     colors = list(d['Group'])
 
     fig = plt.figure()
@@ -38,6 +50,12 @@ def plot_cluster_results(data,title,file):
 
 
 def plot_cluster_diffs_in_age(data,age):
+    """
+    Plots 2D plot of what the model classifed for the age group
+    :param data: dataframe of data for specific age group
+    :param age: string of age gorup
+    :return: None
+    """
     fig = plt.figure()
     ax = fig.gca()
     ax.scatter(x=data['Water Maze CIPL'], y=data['Working Memory CIPL'], c=list(data['Group']))

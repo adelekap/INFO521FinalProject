@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f23f6d30-0a7c-4d78-ba07-2e404989eb69" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regression.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CAS_Watermaze.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CAS_WorkingMemory.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ageIncluded.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/explore.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/justData.pdf" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clustering.py" afterPath="$PROJECT_DIR$/clustering.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data.py" afterPath="$PROJECT_DIR$/data.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clustering.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="clustering.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/clustering.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="34" column="21" lean-forward="false" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+            <state relative-caret-position="294">
+              <caret line="91" column="40" lean-forward="true" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -60,7 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="regression.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="regression.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/regression.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -458,22 +450,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clustering.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="34" column="21" lean-forward="false" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/regression.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="58" lean-forward="false" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clustering.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="91" column="40" lean-forward="true" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
