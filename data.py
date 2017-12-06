@@ -30,7 +30,7 @@ wmazeData.columns = ['Rat ID','Age','Trial','Water Maze CIPL']
 wmazeData = wmazeData[wmazeData['Rat ID'].isin(rats)]  # Only get the rats that also participated in working memory
 
 # ||| COMBINED DATA |||
-avgs =  wmData[['Rat ID','Working Memory CIPL']].groupby('Rat ID').mean()
+avgs = wmData[['Rat ID','Working Memory CIPL']].groupby('Rat ID').mean()
 allData = pd.DataFrame()
 allData['Working Memory CIPL'] = avgs['Working Memory CIPL']
 allData['Rat ID'] = avgs.index.values
@@ -44,6 +44,22 @@ key['Age'] = watermazeAvgs['Age']
 key['Rat ID'] = watermazeAvgs.index.values
 allData = pd.merge(allData,temp,on='Rat ID')
 allData = pd.merge(allData,key,on='Rat ID')
+
+#Working Memory Thirty Second Delay
+thirtySec = wmData[wmData['Trial'] == '30 second'][['Rat ID','Age','Working Memory CIPL']].groupby('Rat ID').mean()
+thirtySec['Rat ID'] = thirtySec.index.values
+thirtySec = pd.merge(temp,thirtySec,on='Rat ID')
+
+#Working Memory Thirty Minute Delay
+thirtyMin = wmData[wmData['Trial'] == '30 minute'][['Rat ID','Age','Working Memory CIPL']].groupby('Rat ID').mean()
+thirtyMin['Rat ID'] = thirtyMin.index.values
+thirtyMin = pd.merge(temp,thirtyMin,on='Rat ID')
+
+#Working Memory Two Hour Delay
+twoHr = wmData[wmData['Trial'] == '2 hour'][['Rat ID','Age','Working Memory CIPL']].groupby('Rat ID').mean()
+twoHr['Rat ID'] = twoHr.index.values
+twoHr = pd.merge(temp,twoHr,on='Rat ID')
+
 
 
 

@@ -3,6 +3,9 @@ import seaborn as sns
 import data
 from sklearn import linear_model
 
+sns.pairplot(data.allData,x_vars=['Water Maze CIPL','Working Memory CIPL'],y_vars='Age')
+plt.show()
+
 # scatter plot of water maze data
 sns.lmplot('Trial','Water Maze CIPL',data=data.wmazeData,hue='Age',legend_out=True)
 plt.xlim(0,25)

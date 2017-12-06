@@ -26,6 +26,8 @@ def plot_classifications(data,responses,title='Plot',marker='o',col=None,accurac
         props = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
         ax.text(0.05, 0.95,'CLASSIFICATON ACCURACY: '+accuracy, transform=ax.transAxes, fontsize=14,
                 verticalalignment='top',bbox=props,horizontalalignment='left')
+    plt.xlim(0,30)
+    plt.ylim(0,45)
     plt.tight_layout()
     plt.savefig('Figures/'+title+'.pdf')
     plt.show()
@@ -42,8 +44,8 @@ def find_best_K(trainSet,testSet):
     bestK = accuracy.index(max(accuracy))
     print('Optimal K: ' + str(bestK))
     plt.plot(range(1, 201), accuracy, linestyle='-')
-    plt.xlabel('K')
-    plt.ylabel('Classification Accuracy')
+    plt.xlabel('Value of K')
+    plt.ylabel('Testing Accuracy')
     plt.savefig('Figures/EvaluateKs.pdf')
     plt.show()
     return bestK,accuracy
