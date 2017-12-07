@@ -1,6 +1,7 @@
 import data
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D  # NEED THIS TO PLOT IN 3D
 
 
 dir = 'Figures/'
@@ -41,8 +42,8 @@ def plot_cluster_results(data,title,file):
     ax = fig.gca(projection='3d')
     ax.scatter(ys=data['Age'], zs=data['Water Maze CIPL'], xs=data['Working Memory CIPL'], c=colors)
     ax.set_xlabel('Working Memory CIPL')
-    ax.set_zlabel('Water Maze CIPL')
-    ax.set_ylabel('Age')
+    ax.set_zlabel('Spatial Memory CIPL')
+    ax.set_ylabel('Age (months)')
     plt.title(title,fontsize=12)
     plt.tight_layout()
     plt.savefig(dir+file)
@@ -60,7 +61,7 @@ def plot_cluster_diffs_in_age(data,age):
     ax = fig.gca()
     ax.scatter(x=data['Water Maze CIPL'], y=data['Working Memory CIPL'], c=list(data['Group']))
     ax.set_ylabel('Working Memory CIPL')
-    ax.set_xlabel('Water Maze CIPL')
+    ax.set_xlabel('Spatial Memory CIPL')
     plt.xlim(0,45)
     plt.ylim(0,30)
     plt.title(age+' Cluster',fontsize=12)

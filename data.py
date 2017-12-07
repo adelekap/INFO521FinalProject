@@ -29,6 +29,8 @@ wmazeData = (wmazeDataAll[wmazeDataAll['TrialType'] == 'Spatial'])[['Rat ID','Ag
 wmazeData.columns = ['Rat ID','Age','Trial','Water Maze CIPL']
 wmazeData = wmazeData[wmazeData['Rat ID'].isin(rats)]  # Only get the rats that also participated in working memory
 
+
+
 # ||| COMBINED DATA |||
 avgs = wmData[['Rat ID','Working Memory CIPL']].groupby('Rat ID').mean()
 allData = pd.DataFrame()
@@ -59,9 +61,3 @@ thirtyMin = pd.merge(temp,thirtyMin,on='Rat ID')
 twoHr = wmData[wmData['Trial'] == '2 hour'][['Rat ID','Age','Working Memory CIPL']].groupby('Rat ID').mean()
 twoHr['Rat ID'] = twoHr.index.values
 twoHr = pd.merge(temp,twoHr,on='Rat ID')
-
-
-
-
-
-

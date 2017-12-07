@@ -1,32 +1,78 @@
-import matplotlib.pyplot as plt
-import seaborn as sns
+from sklearn.model_selection import train_test_split
 import data
-from sklearn import linear_model
-
-sns.pairplot(data.allData,x_vars=['Water Maze CIPL','Working Memory CIPL'],y_vars='Age')
-plt.show()
-
-# scatter plot of water maze data
-sns.lmplot('Trial','Water Maze CIPL',data=data.wmazeData,hue='Age',legend_out=True)
-plt.xlim(0,25)
-plt.ylim(-3,70)
-plt.title('Water Maze Task Performance by Age',fontsize=12)
-plt.tight_layout()
-plt.savefig('Figures/waterMazeRegression.pdf')
-plt.show()
-
-# water maze and working memory (SHOWS WEAK CORRELATION OF TASK PERFORMANCE)
-sns.jointplot('Working Memory CIPL','Water Maze CIPL',data=data.allData,kind='reg')
-plt.title('Relationship Between Spatial and Working Memory Tasks',fontsize=12)
-plt.tight_layout()
-plt.savefig('Figures/taskRegression.pdf')
-plt.show()
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+import numpy as np
+from mpl_toolkits.mplot3d import Axes3D  # necessary to plot in 3D
 
 
-reg = linear_model.LinearRegression()
-x = data.allData['Working Memory CIPL']
-y = data.allData['Water Maze CIPL']
-reg.fit(data.allData['Working Memory CIPL'],data.allData['Water Maze CIPL'])
-print(reg.coef_)
+def formula(xs,intercept, coefficients):
+    """
+    Calculates y value for given x's and model parameters
+    :param xs: array of x inputs
+    :param intercept: y intercept parameter
+    :param coefficients: list of coefficients
+    :return: list of y's
+    """
+    ys = []
+    for x in xs:
+        y = intercept
+        for coefficient in coefficients:
+            y += x*coefficient
+        ys.append(y)
+    return ys
+
+
+def plot_fit_3D(intercept, coefficients,x_range,x_train,y_train,title='regPlot'):
+    """
+    Plots a scatter plot of the training data and the line of regression for two features.
+    :param intercept: y intercept parameter
+    :param coefficients: array of coefficients [working memory, spatial memory]
+    :param x_range: list of x's
+    :param x_train: training data
+    :param y_train: training responses
+    :param title: plot title
+    :return: None
+    """
+    xx, yy = np.meshgrid(x_range, x_range)
+    z = formula(x_range,intercept,coefficients)
+
+    fig = plt.figure(figsize=(14,10))
+    ax = fig.gca(projection='3d')
+    ax.scatter(xs=y_train, zs=x_train['Water Maze CIPL'], ys=x_train['Working Memory CIPL'])
+    ax.plot_surface(X=z, Y=yy, Z=xx, color='r',alpha=0.5)
+    ax.set_ylabel('Working Memory CIPL')
+    ax.set_zlabel('Spatial Memory CIPL')
+    ax.set_xlabel('Age (months)')
+    props = dict(boxstyle='round', facecolor='g', alpha=0.5)
+    ax.text(0.05,0.95,1.0,'age = {0} + {1}(Working) + {2}(Spatial)'.format(str(intercept.round(2)),str(coefficients[0].round(2)),
+                                                         str(coefficients[1].round(2))),transform=ax.transAxes,
+            fontsize=18,verticalalignment='top',bbox=props,horizontalalignment='left')
+    plt.savefig('Figures/'+title+'.pdf')
+    plt.show()
+
+
+
+if __name__ == '__main__':
+    print(data.allData.groupby('Age').count())
+    features = ['Working Memory CIPL','Water Maze CIPL']
+    X = data.allData[features]
+    y = data.allData['Age']
+
+    X_train, X_test, y_train, y_test = train_test_split(X,y,random_state=1)
+
+    linreg = LinearRegression()
+    linreg.fit(X_train, y_train)
+
+    intercept = linreg.intercept_
+    coefs = linreg.coef_    # working memory and spatial memory coefficients
+
+    xmax = int(max([X_train['Working Memory CIPL'].max(),X_train['Water Maze CIPL'].max()]))
+    xmin = int(min([X_train['Working Memory CIPL'].min(),X_train['Water Maze CIPL'].min()]))
+    plot_fit_3D(intercept,coefs,range(xmin-1,xmax+2),X_train,y_train,title='leastSquares')
+
+
+
+
 
 
