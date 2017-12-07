@@ -64,7 +64,10 @@ def fit_2D(X,y,title):
 
     intercept = linreg.intercept_
     coefs = linreg.coef_
+    plot_2d(X,y,intercept,coefs,title)
 
+
+def plot_2d(X,y,intercept,coefs,title,dir='Results/Regression/OrdinaryLeastSquares/'):
     #print(np.mean(cross_val_score(linreg,X_test,y_test,cv=11))) ToDo: Figure out cross validation
     xs = np.linspace(0, 30, 1000)
     plt.scatter(X,y)
@@ -73,7 +76,7 @@ def fit_2D(X,y,title):
     plt.ylabel('CIPL')
     plt.title(title)
     props = dict(boxstyle='round', facecolor='g', alpha=0.5)
-    plt.savefig('Results/Regression/OrdinaryLeastSquares/{0}.pdf'.format(title))
+    plt.savefig('{0}{1}.pdf'.format(dir,title))
     plt.text(1.0, 1.0,'r = '+str(stats.pearsonr(X,y)[0].round(3)), fontsize=12, verticalalignment='top',
               bbox=props, horizontalalignment='left')
     plt.show()
@@ -104,7 +107,7 @@ if __name__ == '__main__':
     fit_2D(data.twoHr['Age'],data.twoHr['Working Memory CIPL'],'Two Hour WM')
     fit_2D(data.thirtyMin['Age'], data.thirtyMin['Working Memory CIPL'], 'Thirty Minute WM')
     fit_2D(data.thirtySec['Age'], data.thirtySec['Working Memory CIPL'], 'Thirty Second WM')
-    fit_2D(data.allData['Water Maze CIPL'],data.allData['Age'],'Spatial Memory Performance Across Age')
+    fit_2D(data.allData['Age'],data.allData['Water Maze CIPL'],'Spatial Memory Performance Across Age')
 
 
 
