@@ -2,6 +2,8 @@ import data
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D  # NEED THIS TO PLOT IN 3D
+from sklearn import metrics
+from sklearn.metrics import pairwise_distances
 
 
 
@@ -27,7 +29,7 @@ def set_colors(data,model,age=True):
     return data
 
 
-def plot_cluster_results(data,title,file):
+def plot_cluster_results(data,title,file,s,sk):
     """
     Plots the results of the kmeans model
     :param data: dataframe of cleaned data
@@ -37,13 +39,17 @@ def plot_cluster_results(data,title,file):
     """
     colors = list(d['Group'])
 
-    fig = plt.figure()
+    fig = plt.figure(figsize=(12,8))
     ax = fig.gca(projection='3d')
     ax.scatter(ys=data['Age'], zs=data['Water Maze CIPL'], xs=data['Working Memory CIPL'], c=colors)
     ax.set_xlabel('Working Memory CIPL')
     ax.set_zlabel('Spatial Memory CIPL')
     ax.set_ylabel('Age (months)')
-    plt.title(title,fontsize=12)
+    props = dict(boxstyle='round', facecolor='g', alpha=0.5)
+    performance = 'Silhouette Coefficient = {0}\nCalinski-Harabaz Index = {1}'.format(s.round(2), sk.round(2))
+    ax.text(-5,5,45, s=performance, fontsize=12, verticalalignment='top',
+            bbox=props, horizontalalignment='left')
+    plt.title(title,fontsize=16)
     plt.tight_layout()
     plt.savefig('Results/Clustering/'+file)
     plt.show()
@@ -75,14 +81,21 @@ if __name__ == '__main__':
     #### MODEL INCLUDES AGE
     d = data.allData[['Age','Water Maze CIPL','Working Memory CIPL']]
     m = KMeans(n_clusters=3,random_state=0).fit(data.allData[['Age','Water Maze CIPL','Working Memory CIPL']])
-    plot_cluster_results(set_colors(d,m),title='Behavioral Clustering using K-Means (age included)',file='ageIncluded.pdf')
+    labels = m.labels_
+    s = metrics.silhouette_score(d,labels)
+    sk = metrics.calinski_harabaz_score(d,labels)
+    plot_cluster_results(set_colors(d,m),'Behavioral Clustering using K-Means (age included)','ageIncluded.pdf',s,sk)
+
 
     #### PLOT 3D
     #### MODEL DOES NOT INCLUDE AGE
     d = data.allData[['Age','Water Maze CIPL','Working Memory CIPL']]
     m = KMeans(n_clusters=3,random_state=0).fit(data.allData[['Water Maze CIPL','Working Memory CIPL']])
-    plot_cluster_results(set_colors(d,m,age=False),title='Behavioral Clustering using K-Means (age not included)',
-                         file='justData.pdf')
+    labels = m.labels_
+    s = metrics.silhouette_score(d, labels)
+    sk = metrics.calinski_harabaz_score(d, labels)
+    plot_cluster_results(set_colors(d,m,age=False),'Behavioral Clustering using K-Means (age not included)',
+                         'justData.pdf',s,sk)
 
     #### SEE DIFFERENCES IN AGE GROUPS
     yng = d[d['Age'] == 6]
