@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.lines as mlines
 from sklearn import metrics
-from sklearn.model_selection import cross_val_score,KFold
+from sklearn.model_selection import KFold
 
 """
 This module fits the data to a K-Nearest Neighbors model
@@ -22,7 +22,7 @@ def plot_training_and_testing(trainSet,testSet):
     plot_classifications(testSet[['Working Memory CIPL','Water Maze CIPL']],testSet['Age'],'TestingSet')
 
 
-def plot_classifications(data,responses,title='Plot',marker='o',col=None,accuracy=None):
+def plot_classifications(data,responses,title='Plot',marker='o',col=None,accuracy=None,k=None):
     """
     Plots the classification outputs from the model
     :param data: data set
@@ -43,7 +43,10 @@ def plot_classifications(data,responses,title='Plot',marker='o',col=None,accurac
     grDot = mlines.Line2D([],[],color='#676767',marker=marker,label='Middle',linestyle=' ')
     whDot = mlines.Line2D([], [], color='#f9f9f9', marker=marker, label='Old',linestyle=' ')
     plt.legend(handles=[blDot,grDot,whDot],numpoints=1,loc=4)
-    plt.title(title)
+    if k:
+        plt.title(title + ' K = ' + str(k))
+    else:
+        plt.title(title)
     if accuracy:
         props = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
         ax.text(0.05, 0.95,'CLASSIFICATON ACCURACY: '+accuracy, transform=ax.transAxes, fontsize=14,
@@ -96,17 +99,12 @@ if __name__ == '__main__':
     predictions = knn.predict(testSet[['Working Memory CIPL','Water Maze CIPL']])
     actual = list(testSet['Age'])
 
-    # Cross Validation
-    scores = cross_val_score(knn, data.allData[['Working Memory CIPL', 'Water Maze CIPL']], data.allData['Age'], cv=5)
+    # 100-fold Cross Validation
     kf = KFold(n_splits=100)
-    split = kf.split(data.allData[['Working Memory CIPL','Water Maze CIPL']])
-
     cv = np.mean([knn.score(testSet[['Working Memory CIPL', 'Water Maze CIPL']],testSet['Age']) for train, test in
            kf.split(data.allData[['Working Memory CIPL', 'Water Maze CIPL']])])
 
     # Set edge colors to be red if incorrectly predicted and plot
     col = ['#020202' if predictions[n]==actual[n] else '#ce0c2c' for n in range(len(actual))]
     plot_classifications(testSet[['Working Memory CIPL','Water Maze CIPL']],predictions,'Model Predictions',
-                         marker='^',col = col,accuracy=str(cv))
-
-
+                         marker='^',col = col,accuracy=str(cv),k=bestK)

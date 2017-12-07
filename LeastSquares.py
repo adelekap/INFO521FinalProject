@@ -4,6 +4,8 @@ from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 import numpy as np
 from mpl_toolkits.mplot3d import Axes3D  # necessary to plot in 3D
+from sklearn.model_selection import cross_val_score
+import scipy.stats as stats
 
 
 def formula(xs,intercept, coefficients):
@@ -23,7 +25,8 @@ def formula(xs,intercept, coefficients):
     return ys
 
 
-def plot_fit_3D(intercept, coefficients,x_range,x_train,y_train,title='regPlot'):
+
+def plot_fit_3D(intercept, coefficients,x_range,x_train,y_train,title='regPlot',cv='None'):
     """
     Plots a scatter plot of the training data and the line of regression for two features.
     :param intercept: y intercept parameter
@@ -45,10 +48,34 @@ def plot_fit_3D(intercept, coefficients,x_range,x_train,y_train,title='regPlot')
     ax.set_zlabel('Spatial Memory CIPL')
     ax.set_xlabel('Age (months)')
     props = dict(boxstyle='round', facecolor='g', alpha=0.5)
-    ax.text(0.05,0.95,1.0,'age = {0} + {1}(Working) + {2}(Spatial)'.format(str(intercept.round(2)),str(coefficients[0].round(2)),
-                                                         str(coefficients[1].round(2))),transform=ax.transAxes,
-            fontsize=18,verticalalignment='top',bbox=props,horizontalalignment='left')
+    ax.text(0.05,0.95,1.0,'age = {0} + {1}(Working) + {2}(Spatial)\nCross Validation:{3}'.format(str(intercept.round(2)),
+                                                                                                 str(coefficients[0].round(2)),
+                                                                                                 str(coefficients[1].round(2)),
+                                                                                                 str(cv)),
+            transform=ax.transAxes,fontsize=18,verticalalignment='top',bbox=props,horizontalalignment='left')
     plt.savefig('Results/Regression/OrdinaryLeastSquares/'+title+'.pdf')
+    plt.show()
+
+def fit_2D(X,y,title):
+    X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1)
+
+    linreg = LinearRegression()
+    linreg.fit(X_train.to_frame(), y_train)
+
+    intercept = linreg.intercept_
+    coefs = linreg.coef_
+
+    #print(np.mean(cross_val_score(linreg,X_test,y_test,cv=11))) ToDo: Figure out cross validation
+    xs = np.linspace(0, 30, 1000)
+    plt.scatter(X,y)
+    plt.plot(xs,formula(xs,intercept,coefs),'r')
+    plt.xlabel('Age (months)')
+    plt.ylabel('CIPL')
+    plt.title(title)
+    props = dict(boxstyle='round', facecolor='g', alpha=0.5)
+    plt.savefig('Results/Regression/OrdinaryLeastSquares/{0}.pdf'.format(title))
+    plt.text(1.0, 1.0,'r = '+str(stats.pearsonr(X,y)[0].round(3)), fontsize=12, verticalalignment='top',
+              bbox=props, horizontalalignment='left')
     plt.show()
 
 
@@ -66,9 +93,21 @@ if __name__ == '__main__':
     intercept = linreg.intercept_
     coefs = linreg.coef_    # working memory and spatial memory coefficients
 
-    xmax = int(max([X_train['Working Memory CIPL'].max(),X_train['Water Maze CIPL'].max()]))
-    xmin = int(min([X_train['Working Memory CIPL'].min(),X_train['Water Maze CIPL'].min()]))
-    plot_fit_3D(intercept,coefs,range(xmin-1,xmax+2),X_train,y_train,title='leastSquares')
+    # 10-fold Cross Validation
+    cv = np.mean(cross_val_score(linreg,X_test,y_test,cv=10))
+
+    xmax = int(max([X_train['Working Memory CIPL'].max(), X_train['Water Maze CIPL'].max()]))
+    xmin = int(min([X_train['Working Memory CIPL'].min(), X_train['Water Maze CIPL'].min()]))
+    plot_fit_3D(intercept, coefs, range(xmin - 1, xmax + 2), X_train, y_train, title='leastSquares',cv=cv.round(3))
+
+
+    fit_2D(data.twoHr['Age'],data.twoHr['Working Memory CIPL'],'Two Hour WM')
+    fit_2D(data.thirtyMin['Age'], data.thirtyMin['Working Memory CIPL'], 'Thirty Minute WM')
+    fit_2D(data.thirtySec['Age'], data.thirtySec['Working Memory CIPL'], 'Thirty Second WM')
+    fit_2D(data.allData['Water Maze CIPL'],data.allData['Age'],'Spatial Memory Performance Across Age')
+
+
+
 
 
 
