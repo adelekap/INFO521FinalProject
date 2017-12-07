@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D  # NEED THIS TO PLOT IN 3D
 
 
-dir = 'Figures/'
 
 def set_colors(data,model,age=True):
     """
@@ -46,7 +45,7 @@ def plot_cluster_results(data,title,file):
     ax.set_ylabel('Age (months)')
     plt.title(title,fontsize=12)
     plt.tight_layout()
-    plt.savefig(dir+file)
+    plt.savefig('Results/Clustering/'+file)
     plt.show()
 
 
@@ -66,7 +65,7 @@ def plot_cluster_diffs_in_age(data,age):
     plt.ylim(0,30)
     plt.title(age+' Cluster',fontsize=12)
     plt.tight_layout()
-    plt.savefig(dir+age+'Cluster.pdf')
+    plt.savefig('Results/Clustering/'+age+'Cluster.pdf')
     plt.show()
 
 

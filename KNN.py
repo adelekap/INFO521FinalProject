@@ -4,6 +4,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.lines as mlines
 from sklearn import metrics
+from sklearn.model_selection import cross_val_score,KFold
+
+"""
+This module fits the data to a K-Nearest Neighbors model
+to classify age using cognitive performance.
+"""
 
 def plot_training_and_testing(trainSet,testSet):
     """
@@ -12,8 +18,8 @@ def plot_training_and_testing(trainSet,testSet):
     :param testSet: testing set data
     :return: None
     """
-    plot_classifications(trainSet[['Working Memory CIPL','Water Maze CIPL']],trainSet['Age'],'Training Set')
-    plot_classifications(testSet[['Working Memory CIPL','Water Maze CIPL']],testSet['Age'],'Testing Set')
+    plot_classifications(trainSet[['Working Memory CIPL','Water Maze CIPL']],trainSet['Age'],'TrainingSet')
+    plot_classifications(testSet[['Working Memory CIPL','Water Maze CIPL']],testSet['Age'],'TestingSet')
 
 
 def plot_classifications(data,responses,title='Plot',marker='o',col=None,accuracy=None):
@@ -45,7 +51,7 @@ def plot_classifications(data,responses,title='Plot',marker='o',col=None,accurac
     plt.xlim(0,30)
     plt.ylim(0,45)
     plt.tight_layout()
-    plt.savefig('Figures/'+title+'.pdf')
+    plt.savefig('Results/Classification/KNN/'+title+'.pdf')
     plt.show()
 
 
@@ -68,9 +74,10 @@ def find_best_K(trainSet,testSet):
     plt.plot(range(1, 201), accuracy, linestyle='-')
     plt.xlabel('Value of K')
     plt.ylabel('Testing Accuracy')
-    plt.savefig('Figures/EvaluateKs.pdf')
+    plt.savefig('Results/Classification/KNN/EvaluateKs.pdf')
     plt.show()
     return bestK,accuracy
+
 
 
 
@@ -82,14 +89,24 @@ if __name__ == '__main__':
     testSet = data.allData[~msk]
     plot_training_and_testing(trainSet,testSet)
 
-    #Train Model
+    # Train Model
     bestK,accuracies = find_best_K(trainSet,testSet)
     knn = KNeighborsClassifier(n_neighbors=bestK)
     knn.fit(trainSet[['Working Memory CIPL','Water Maze CIPL']],trainSet['Age'])
     predictions = knn.predict(testSet[['Working Memory CIPL','Water Maze CIPL']])
     actual = list(testSet['Age'])
 
-    #Set edge colors to be red if incorrectly predicted
+    # Cross Validation
+    scores = cross_val_score(knn, data.allData[['Working Memory CIPL', 'Water Maze CIPL']], data.allData['Age'], cv=5)
+    kf = KFold(n_splits=100)
+    split = kf.split(data.allData[['Working Memory CIPL','Water Maze CIPL']])
+
+    cv = np.mean([knn.score(testSet[['Working Memory CIPL', 'Water Maze CIPL']],testSet['Age']) for train, test in
+           kf.split(data.allData[['Working Memory CIPL', 'Water Maze CIPL']])])
+
+    # Set edge colors to be red if incorrectly predicted and plot
     col = ['#020202' if predictions[n]==actual[n] else '#ce0c2c' for n in range(len(actual))]
     plot_classifications(testSet[['Working Memory CIPL','Water Maze CIPL']],predictions,'Model Predictions',
-                         marker='^',col = col,accuracy=str(max(accuracies)))
+                         marker='^',col = col,accuracy=str(cv))
+
+

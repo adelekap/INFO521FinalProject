@@ -48,13 +48,12 @@ def plot_fit_3D(intercept, coefficients,x_range,x_train,y_train,title='regPlot')
     ax.text(0.05,0.95,1.0,'age = {0} + {1}(Working) + {2}(Spatial)'.format(str(intercept.round(2)),str(coefficients[0].round(2)),
                                                          str(coefficients[1].round(2))),transform=ax.transAxes,
             fontsize=18,verticalalignment='top',bbox=props,horizontalalignment='left')
-    plt.savefig('Figures/'+title+'.pdf')
+    plt.savefig('Results/Regression/OrdinaryLeastSquares/'+title+'.pdf')
     plt.show()
 
 
 
 if __name__ == '__main__':
-    print(data.allData.groupby('Age').count())
     features = ['Working Memory CIPL','Water Maze CIPL']
     X = data.allData[features]
     y = data.allData['Age']
