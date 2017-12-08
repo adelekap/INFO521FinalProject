@@ -26,7 +26,8 @@ def formula(xs,intercept, coefficients):
 
 
 
-def plot_fit_3D(intercept, coefficients,x_range,x_train,y_train,title='regPlot',cv='None'):
+def plot_fit_3D(intercept, coefficients,x_range,x_train,y_train,title='regPlot',cv='None',
+                dir='Results/Regression/OrdinaryLeastSquares/'):
     """
     Plots a scatter plot of the training data and the line of regression for two features.
     :param intercept: y intercept parameter
@@ -53,7 +54,7 @@ def plot_fit_3D(intercept, coefficients,x_range,x_train,y_train,title='regPlot',
                                                                                                  str(coefficients[1].round(2)),
                                                                                                  str(cv)),
             transform=ax.transAxes,fontsize=18,verticalalignment='top',bbox=props,horizontalalignment='left')
-    plt.savefig('Results/Regression/OrdinaryLeastSquares/'+title+'.pdf')
+    plt.savefig(dir+title+'.pdf')
     plt.show()
 
 def fit_2D(X,y,title):

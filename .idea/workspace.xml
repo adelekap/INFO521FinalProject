@@ -2,7 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f23f6d30-0a7c-4d78-ba07-2e404989eb69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KMeans.py" afterPath="$PROJECT_DIR$/KMeans.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Results/Clustering/ageIncluded.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Results/Clustering/justData.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Results/Clustering/midCluster.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Results/Clustering/oldCluster.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Results/Clustering/yngCluster.pdf" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/Classification/KNN/EvaluateKs.pdf" afterPath="$PROJECT_DIR$/Results/Classification/KNN/EvaluateKs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/Classification/KNN/Model Predictions.pdf" afterPath="$PROJECT_DIR$/Results/Classification/KNN/Model Predictions.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/Classification/KNN/TestingSet.pdf" afterPath="$PROJECT_DIR$/Results/Classification/KNN/TestingSet.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/Classification/KNN/TrainingSet.pdf" afterPath="$PROJECT_DIR$/Results/Classification/KNN/TrainingSet.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/Clustering/KMeans/ageIncluded.pdf" afterPath="$PROJECT_DIR$/Results/Clustering/KMeans/ageIncluded.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/Clustering/KMeans/justData.pdf" afterPath="$PROJECT_DIR$/Results/Clustering/KMeans/justData.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/Clustering/KMeans/midCluster.pdf" afterPath="$PROJECT_DIR$/Results/Clustering/KMeans/midCluster.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/Clustering/KMeans/oldCluster.pdf" afterPath="$PROJECT_DIR$/Results/Clustering/KMeans/oldCluster.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/Clustering/KMeans/yngCluster.pdf" afterPath="$PROJECT_DIR$/Results/Clustering/KMeans/yngCluster.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/Regression/OrdinaryLeastSquares/Spatial Memory Performance Across Age.pdf" afterPath="$PROJECT_DIR$/Results/Regression/OrdinaryLeastSquares/Spatial Memory Performance Across Age.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/Regression/OrdinaryLeastSquares/Thirty Minute WM.pdf" afterPath="$PROJECT_DIR$/Results/Regression/OrdinaryLeastSquares/Thirty Minute WM.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/Regression/OrdinaryLeastSquares/Thirty Second WM.pdf" afterPath="$PROJECT_DIR$/Results/Regression/OrdinaryLeastSquares/Thirty Second WM.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/Regression/OrdinaryLeastSquares/Two Hour WM.pdf" afterPath="$PROJECT_DIR$/Results/Regression/OrdinaryLeastSquares/Two Hour WM.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/Regression/OrdinaryLeastSquares/leastSquares.pdf" afterPath="$PROJECT_DIR$/Results/Regression/OrdinaryLeastSquares/leastSquares.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KNN.py" afterPath="$PROJECT_DIR$/KNN.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeastSquares.py" afterPath="$PROJECT_DIR$/LeastSquares.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,16 +34,18 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/INFO521FinalProject$classification.coverage" NAME="classification Coverage Results" MODIFIED="1512597543150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/INFO521FinalProject$clustering.coverage" NAME="clustering Coverage Results" MODIFIED="1512663514681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/INFO521FinalProject$BayesianReg.coverage" NAME="BayesianReg Coverage Results" MODIFIED="1512681554351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.idea" />
+    <SUITE FILE_PATH="coverage/INFO521FinalProject$SVM__1_.coverage" NAME="SVM (1) Coverage Results" MODIFIED="1512706096883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/INFO521FinalProject$LeastSquares.coverage" NAME="LeastSquares Coverage Results" MODIFIED="1512706288085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/INFO521FinalProject$KNN.coverage" NAME="KNN Coverage Results" MODIFIED="1512685613892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/INFO521FinalProject$SVM.coverage" NAME="SVM Coverage Results" MODIFIED="1512687641284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.idea" />
     <SUITE FILE_PATH="coverage/INFO521FinalProject$BayesianReg__1_.coverage" NAME="BayesianReg (1) Coverage Results" MODIFIED="1512682490278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/INFO521FinalProject$KMeans.coverage" NAME="KMeans Coverage Results" MODIFIED="1512684530314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/INFO521FinalProject$KMeans.coverage" NAME="KMeans Coverage Results" MODIFIED="1512685480574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/INFO521FinalProject$concat.coverage" NAME="concat Coverage Results" MODIFIED="1511995958676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/INFO521FinalProject$data.coverage" NAME="data Coverage Results" MODIFIED="1512513013340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/INFO521FinalProject$clustering.coverage" NAME="clustering Coverage Results" MODIFIED="1512663514681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/INFO521FinalProject$regression.coverage" NAME="regression Coverage Results" MODIFIED="1512669586683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/INFO521FinalProject$BayesianReg.coverage" NAME="BayesianReg Coverage Results" MODIFIED="1512681554351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.idea" />
     <SUITE FILE_PATH="coverage/INFO521FinalProject$explore.coverage" NAME="explore Coverage Results" MODIFIED="1512098659759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/INFO521FinalProject$LeastSquares.coverage" NAME="LeastSquares Coverage Results" MODIFIED="1512682047107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/INFO521FinalProject$KNN.coverage" NAME="KNN Coverage Results" MODIFIED="1512675454479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -39,9 +62,11 @@
       <file leaf-file-name="KNN.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KNN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-199">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="41" />
-              <folding />
+            <state relative-caret-position="29">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="57" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,8 +74,8 @@
       <file leaf-file-name="LeastSquares.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LeastSquares.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="49" column="4" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="60" />
+            <state relative-caret-position="180">
+              <caret line="12" column="52" lean-forward="false" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -58,14 +83,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KMeans.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/KMeans.py">
+      <file leaf-file-name="SVM.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SVM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="49" column="19" lean-forward="false" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+            <state relative-caret-position="300">
+              <caret line="20" column="11" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#23#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cm.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python3.5/site-packages/matplotlib/cm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+              <folding>
+                <element signature="e#190#298#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="axes3d.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/mpl_toolkits/mplot3d/axes3d.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="2256" column="0" lean-forward="false" selection-start-line="2256" selection-start-column="0" selection-end-line="2256" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,6 +135,7 @@
       <find>Figures</find>
       <find>figures</find>
       <find>dir</find>
+      <find>cool</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -102,11 +150,14 @@
         <option value="$PROJECT_DIR$/regression.py" />
         <option value="$PROJECT_DIR$/clustering.py" />
         <option value="$PROJECT_DIR$/classification.py" />
-        <option value="$PROJECT_DIR$/KNN.py" />
         <option value="$PROJECT_DIR$/.idea/BayesianReg.py" />
-        <option value="$PROJECT_DIR$/LeastSquares.py" />
         <option value="$PROJECT_DIR$/BayesianReg.py" />
         <option value="$PROJECT_DIR$/KMeans.py" />
+        <option value="$PROJECT_DIR$/.idea/DBSCAN.py" />
+        <option value="$PROJECT_DIR$/KNN.py" />
+        <option value="$PROJECT_DIR$/.idea/SVM.py" />
+        <option value="$PROJECT_DIR$/LeastSquares.py" />
+        <option value="$PROJECT_DIR$/SVM.py" />
       </list>
     </option>
   </component>
@@ -167,43 +218,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.KMeans">
-    <configuration name="BayesianReg (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="INFO521FinalProject" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BayesianReg.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="BayesianReg" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.idea" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="INFO521FinalProject" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.idea/BayesianReg.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.LeastSquares">
     <configuration name="KMeans" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -258,20 +273,56 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="SVM (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="INFO521FinalProject" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SVM.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="SVM" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.idea" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="INFO521FinalProject" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.idea/SVM.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.KNN" />
-      <item index="1" class="java.lang.String" itemvalue="Python.LeastSquares" />
-      <item index="2" class="java.lang.String" itemvalue="Python.BayesianReg" />
-      <item index="3" class="java.lang.String" itemvalue="Python.BayesianReg (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.KMeans" />
+      <item index="1" class="java.lang.String" itemvalue="Python.KMeans" />
+      <item index="2" class="java.lang.String" itemvalue="Python.SVM" />
+      <item index="3" class="java.lang.String" itemvalue="Python.SVM (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.LeastSquares" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.KMeans" />
-        <item index="1" class="java.lang.String" itemvalue="Python.BayesianReg (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.LeastSquares" />
-        <item index="3" class="java.lang.String" itemvalue="Python.BayesianReg" />
-        <item index="4" class="java.lang.String" itemvalue="Python.KNN" />
+        <item index="0" class="java.lang.String" itemvalue="Python.LeastSquares" />
+        <item index="1" class="java.lang.String" itemvalue="Python.SVM (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.SVM" />
+        <item index="3" class="java.lang.String" itemvalue="Python.KNN" />
+        <item index="4" class="java.lang.String" itemvalue="Python.KMeans" />
       </list>
     </recent_temporary>
   </component>
@@ -294,7 +345,7 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -342,7 +393,24 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="87" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LeastSquares.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LeastSquares.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/SVM.py</url>
+          <line>76</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="106" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -547,32 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-199">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeastSquares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="49" column="4" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python3.5/site-packages/matplotlib/pyplot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -581,12 +623,108 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/DBSCAN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/SVM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/KMeans.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="49" column="19" lean-forward="false" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+        <state relative-caret-position="-452">
+          <caret line="53" column="36" lean-forward="false" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.5/site-packages/numpy/core/shape_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="277" column="0" lean-forward="false" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.5/site-packages/sklearn/svm/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/mpl_toolkits/mplot3d/axes3d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="2256" column="0" lean-forward="false" selection-start-line="2256" selection-start-column="0" selection-end-line="2256" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="57" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.5/site-packages/matplotlib/cm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+          <folding>
+            <element signature="e#190#298#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.5/site-packages/matplotlib/colors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="375" column="0" lean-forward="false" selection-start-line="375" selection-start-column="0" selection-end-line="375" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeastSquares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="52" lean-forward="false" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SVM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="11" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>

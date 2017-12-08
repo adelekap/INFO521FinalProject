@@ -60,26 +60,26 @@ def plot_classifications(data,responses,title='Plot',marker='o',col=None,accurac
 
 def find_best_K(trainSet,testSet):
     """
-    Trains models with various Ks and determines the best value for K
+    Uses cross validation to determine the best value for K
     :param trainSet: training data set
     :param testSet: testing data set
-    :return: best value for k and accuracies
+    :return: best value for k and cv values
     """
-    accuracy = []
-    for n in range(1, 201):
-        knn = KNeighborsClassifier(n_neighbors=n)
+    cvs = []
+    for k in range(1,201):
+        knn = KNeighborsClassifier(n_neighbors=k)
+        kf = KFold(n_splits=100)
         knn.fit(trainSet[['Working Memory CIPL', 'Water Maze CIPL']], trainSet['Age'])
-        pred = knn.predict(testSet[['Working Memory CIPL', 'Water Maze CIPL']])
-        actual = list(testSet['Age'])
-        accuracy.append(metrics.accuracy_score(actual, list(pred)))
-    bestK = accuracy.index(max(accuracy))
+        cvs.append(np.mean([knn.score(testSet[['Working Memory CIPL', 'Water Maze CIPL']],testSet['Age']) for train, test in
+           kf.split(data.allData[['Working Memory CIPL', 'Water Maze CIPL']])]))
+    bestK = cvs.index(max(cvs))
     print('Optimal K: ' + str(bestK))
-    plt.plot(range(1, 201), accuracy, linestyle='-')
+    plt.plot(range(1, 201), cvs, linestyle='-')
     plt.xlabel('Value of K')
     plt.ylabel('Testing Accuracy')
     plt.savefig('Results/Classification/KNN/EvaluateKs.pdf')
     plt.show()
-    return bestK,accuracy
+    return bestK,cvs
 
 
 
