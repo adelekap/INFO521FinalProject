@@ -109,12 +109,3 @@ if __name__ == '__main__':
     fit_2D(data.thirtyMin['Age'], data.thirtyMin['Working Memory CIPL'], 'Thirty Minute WM')
     fit_2D(data.thirtySec['Age'], data.thirtySec['Working Memory CIPL'], 'Thirty Second WM')
     fit_2D(data.allData['Age'],data.allData['Water Maze CIPL'],'Spatial Memory Performance Across Age')
-
-
-
-
-
-
-
-
-

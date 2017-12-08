@@ -7,7 +7,6 @@ from mpl_toolkits.mplot3d import Axes3D  # necessary to plot in 3D
 from sklearn.model_selection import cross_val_score
 
 
-
 def make_meshgrid(x, y, h=.02):
     """Create a mesh of points to plot in
 
@@ -76,12 +75,13 @@ if __name__ == '__main__':
     for clf, title, ax in zip(models, titles, sub.flatten()):
         plot_contours(ax, clf, xx, yy,
                       cmap=plt.get_cmap('Accent'), alpha=0.8)
-        #ax.scatter(X0, X1, c=y, cmap=plt.get_cmap('coolwarm'), s=20, edgecolors='k')
+        colors = ['#020202' if rat == 6 else '#676767' if rat == 15 else '#f9f9f9' for rat in list(y)]
+        ax.scatter(X['Working Memory CIPL'],X['Water Maze CIPL'],c=colors)
         cv = np.mean(cross_val_score(clf,X_test,y_test,cv=10))
         ax.set_xlim(xx.min(), xx.max())
         ax.set_ylim(yy.min(), yy.max())
-        ax.set_xlabel('Spatial Memory')
-        ax.set_ylabel('Working Memory')
+        ax.set_ylabel('Spatial Memory')
+        ax.set_xlabel('Working Memory')
         ax.set_xticks(())
         ax.set_yticks(())
         ax.set_title(title +' (CV ='+str(cv.round(2))+')',fontsize=12)
