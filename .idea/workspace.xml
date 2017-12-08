@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f23f6d30-0a7c-4d78-ba07-2e404989eb69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/Classification/SVM/SVMs.pdf" afterPath="$PROJECT_DIR$/Results/Classification/SVM/SVMs.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeastSquares.py" afterPath="$PROJECT_DIR$/LeastSquares.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SVM.py" afterPath="$PROJECT_DIR$/SVM.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/Classification/NaiveBayes/NaiveBayes.pdf" afterPath="$PROJECT_DIR$/Results/Classification/NaiveBayes/NaiveBayes.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/naiveBayes.py" afterPath="$PROJECT_DIR$/naiveBayes.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,7 +14,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/INFO521FinalProject$classification.coverage" NAME="classification Coverage Results" MODIFIED="1512597543150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/INFO521FinalProject$naiveBayes.coverage" NAME="naiveBayes Coverage Results" MODIFIED="1512709158844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/INFO521FinalProject$naiveBayes.coverage" NAME="naiveBayes Coverage Results" MODIFIED="1512710534826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/INFO521FinalProject$clustering.coverage" NAME="clustering Coverage Results" MODIFIED="1512663514681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/INFO521FinalProject$BayesianReg.coverage" NAME="BayesianReg Coverage Results" MODIFIED="1512681554351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.idea" />
     <SUITE FILE_PATH="coverage/INFO521FinalProject$SVM__1_.coverage" NAME="SVM (1) Coverage Results" MODIFIED="1512709007004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -80,8 +79,8 @@
       <file leaf-file-name="naiveBayes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/naiveBayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="68" lean-forward="false" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+            <state relative-caret-position="630">
+              <caret line="42" column="48" lean-forward="false" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -376,11 +375,6 @@
           <url>file://$PROJECT_DIR$/LeastSquares.py</url>
           <line>18</line>
           <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/naiveBayes.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="106" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="108" />
@@ -704,8 +698,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/naiveBayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="68" lean-forward="false" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+        <state relative-caret-position="630">
+          <caret line="42" column="48" lean-forward="false" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
