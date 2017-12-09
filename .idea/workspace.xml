@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f23f6d30-0a7c-4d78-ba07-2e404989eb69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/Classification/NaiveBayes/NaiveBayes.pdf" afterPath="$PROJECT_DIR$/Results/Classification/NaiveBayes/NaiveBayes.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/Classification/SVM/SVMs.pdf" afterPath="$PROJECT_DIR$/Results/Classification/SVM/SVMs.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SVM.py" afterPath="$PROJECT_DIR$/SVM.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/naiveBayes.py" afterPath="$PROJECT_DIR$/naiveBayes.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBSCAN.py" afterPath="$PROJECT_DIR$/DBSCAN.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lasso.py" afterPath="$PROJECT_DIR$/lasso.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,6 +19,7 @@
     <SUITE FILE_PATH="coverage/INFO521FinalProject$BayesianReg.coverage" NAME="BayesianReg Coverage Results" MODIFIED="1512681554351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.idea" />
     <SUITE FILE_PATH="coverage/INFO521FinalProject$SVM__1_.coverage" NAME="SVM (1) Coverage Results" MODIFIED="1512759034540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/INFO521FinalProject$LeastSquares.coverage" NAME="LeastSquares Coverage Results" MODIFIED="1512706288085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/INFO521FinalProject$DBSCAN.coverage" NAME="DBSCAN Coverage Results" MODIFIED="1512792609589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/INFO521FinalProject$KNN.coverage" NAME="KNN Coverage Results" MODIFIED="1512685613892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/INFO521FinalProject$SVM.coverage" NAME="SVM Coverage Results" MODIFIED="1512687641284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.idea" />
     <SUITE FILE_PATH="coverage/INFO521FinalProject$BayesianReg__1_.coverage" NAME="BayesianReg (1) Coverage Results" MODIFIED="1512682490278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -29,7 +28,7 @@
     <SUITE FILE_PATH="coverage/INFO521FinalProject$concat.coverage" NAME="concat Coverage Results" MODIFIED="1511995958676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/INFO521FinalProject$data.coverage" NAME="data Coverage Results" MODIFIED="1512513013340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/INFO521FinalProject$regression.coverage" NAME="regression Coverage Results" MODIFIED="1512669586683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/INFO521FinalProject$lasso.coverage" NAME="lasso Coverage Results" MODIFIED="1512772113710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/INFO521FinalProject$lasso.coverage" NAME="lasso Coverage Results" MODIFIED="1512772536227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/INFO521FinalProject$explore.coverage" NAME="explore Coverage Results" MODIFIED="1512098659759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
@@ -68,13 +67,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lasso.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lasso.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lasso.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="20" column="92" lean-forward="false" selection-start-line="20" selection-start-column="92" selection-end-line="20" selection-end-column="92" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBSCAN.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DBSCAN.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,6 +147,7 @@
         <option value="$PROJECT_DIR$/naiveBayes.py" />
         <option value="$PROJECT_DIR$/SVM.py" />
         <option value="$PROJECT_DIR$/lasso.py" />
+        <option value="$PROJECT_DIR$/DBSCAN.py" />
       </list>
     </option>
   </component>
@@ -196,8 +208,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.lasso">
-    <configuration name="LeastSquares" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.DBSCAN">
+    <configuration name="DBSCAN" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -210,7 +222,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="INFO521FinalProject" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeastSquares.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DBSCAN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -289,18 +301,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.SVM (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Python.LeastSquares" />
-      <item index="2" class="java.lang.String" itemvalue="Python.naiveBayes" />
-      <item index="3" class="java.lang.String" itemvalue="Python.spectralCluster" />
-      <item index="4" class="java.lang.String" itemvalue="Python.lasso" />
+      <item index="1" class="java.lang.String" itemvalue="Python.naiveBayes" />
+      <item index="2" class="java.lang.String" itemvalue="Python.spectralCluster" />
+      <item index="3" class="java.lang.String" itemvalue="Python.lasso" />
+      <item index="4" class="java.lang.String" itemvalue="Python.DBSCAN" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.lasso" />
-        <item index="1" class="java.lang.String" itemvalue="Python.SVM (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.naiveBayes" />
-        <item index="3" class="java.lang.String" itemvalue="Python.spectralCluster" />
-        <item index="4" class="java.lang.String" itemvalue="Python.LeastSquares" />
+        <item index="0" class="java.lang.String" itemvalue="Python.DBSCAN" />
+        <item index="1" class="java.lang.String" itemvalue="Python.lasso" />
+        <item index="2" class="java.lang.String" itemvalue="Python.SVM (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.naiveBayes" />
+        <item index="4" class="java.lang.String" itemvalue="Python.spectralCluster" />
       </list>
     </recent_temporary>
   </component>
@@ -397,8 +409,13 @@
           <line>34</line>
           <option name="timeStamp" value="113" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DBSCAN.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="115" />
+      <option name="time" value="116" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -455,14 +472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.5/site-packages/pandas/core/generic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="2969" column="0" lean-forward="false" selection-start-line="2969" selection-start-column="0" selection-end-line="2969" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -679,14 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBSCAN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spectralCluster.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -723,14 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KMeans.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1131">
-          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LeastSquares.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -741,12 +734,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/KMeans.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1131">
+          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lasso.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="300">
+          <caret line="20" column="92" lean-forward="false" selection-start-line="20" selection-start-column="92" selection-end-line="20" selection-end-column="92" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.5/site-packages/pandas/core/generic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="1531" column="0" lean-forward="false" selection-start-line="1531" selection-start-column="0" selection-end-line="1531" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBSCAN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
