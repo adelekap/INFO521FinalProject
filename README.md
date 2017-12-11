@@ -1,5 +1,4 @@
-# Dissociating Performance Tiers on Memory Tasks Across the Lifespan of the Rat
-### An evaluation of various machine learning models to analyze cognitive aptitude
+# Dissociating Performance Tiers on Memory Tasks Across the Lifespan of the Rat: An evaluation of various machine learning models to analyze cognitive aptitude
 
 To install all required packages:
 `pip install -r requirements.txt`
