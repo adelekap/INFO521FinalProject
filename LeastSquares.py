@@ -49,7 +49,7 @@ def plot_fit_3D(intercept, coefficients,x_range,x_train,y_train,title='regPlot',
     ax.set_zlabel('Spatial Memory CIPL')
     ax.set_xlabel('Age (months)')
     props = dict(boxstyle='round', facecolor='g', alpha=0.5)
-    ax.text(0.05,0.95,1.0,'age = {0} + {1}(Working) + {2}(Spatial)\nCross Validation:{3}'.format(str(intercept.round(2)),
+    ax.text(0.05,0.95,1.0,'age = {0} + {2}(Working) + {1}(Spatial)\nCross Validation:{3}'.format(str(intercept.round(2)),
                                                                                                  str(coefficients[0].round(2)),
                                                                                                  str(coefficients[1].round(2)),
                                                                                                  str(cv)),
@@ -77,9 +77,9 @@ def plot_2d(X,y,intercept,coefs,title,dir='Results/Regression/OrdinaryLeastSquar
     plt.ylabel('CIPL')
     plt.title(title)
     props = dict(boxstyle='round', facecolor='g', alpha=0.5)
+    plt.text(0, 20, 'r = ' + str(stats.pearsonr(X, y)[0].round(3)), fontsize=12, verticalalignment='top',
+             bbox=props, horizontalalignment='left')
     plt.savefig('{0}{1}.pdf'.format(dir,title))
-    plt.text(1.0, 1.0,'r = '+str(stats.pearsonr(X,y)[0].round(3)), fontsize=12, verticalalignment='top',
-              bbox=props, horizontalalignment='left')
     plt.show()
 
 

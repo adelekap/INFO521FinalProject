@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import matplotlib.lines as mlines
 from sklearn import metrics
 from sklearn.model_selection import KFold
+from sklearn.linear_model import LinearRegression
+import scipy.stats as stats
 
 """
 This module fits the data to a K-Nearest Neighbors model
