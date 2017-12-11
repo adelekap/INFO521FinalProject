@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f23f6d30-0a7c-4d78-ba07-2e404989eb69" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DBSCAN.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/CAS_Watermaze.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/CAS_WorkingMemory.csv" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KNN.py" afterPath="$PROJECT_DIR$/KNN.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeastSquares.py" afterPath="$PROJECT_DIR$/LeastSquares.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data.py" afterPath="$PROJECT_DIR$/data.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learning.py" afterPath="$PROJECT_DIR$/learning.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/naiveBayes.py" afterPath="$PROJECT_DIR$/naiveBayes.py" />
-    </list>
+    <list default="true" id="f23f6d30-0a7c-4d78-ba07-2e404989eb69" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,8 +44,8 @@
       <file leaf-file-name="SVM.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SVM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="44" column="14" lean-forward="true" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+            <state relative-caret-position="567">
+              <caret line="64" column="37" lean-forward="true" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -760,8 +750,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SVM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="44" column="14" lean-forward="true" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+        <state relative-caret-position="567">
+          <caret line="64" column="37" lean-forward="true" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
