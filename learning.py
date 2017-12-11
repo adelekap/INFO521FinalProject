@@ -10,6 +10,13 @@ from sklearn.metrics import mean_squared_error
 
 
 def plot_mses(mses,age,alpha):
+    """
+    Plots the error for polynomial orders 1-5
+    :param mses: errors
+    :param age: age group (string)
+    :param alpha: alpha value
+    :return: None
+    """
     plt.plot([1, 2, 3, 4, 5], mses, color='red')
     plt.xlabel('Polynomial Order')
     plt.ylabel('Error')
@@ -18,6 +25,14 @@ def plot_mses(mses,age,alpha):
 
 
 def fit_polynomial(data, title, file, alpha=0):
+    """
+    Fits data to linear models of polynomial degrees 1-5 to compare
+    :param data: water maze cipl data
+    :param title: title of plot (string)
+    :param file: filename
+    :param alpha: alpha value
+    :return: predictions, y intercept, coefficients, and errors
+    """
     X_train, X_test, y_train, y_test = train_test_split(data['Trial'], data['Water Maze CIPL'])
     colors = ['teal', 'yellowgreen', 'gold', 'purple', 'pink', 'brown']
     lw = 2
@@ -49,6 +64,16 @@ def fit_polynomial(data, title, file, alpha=0):
 
 
 def fit_line(y,m,o,young,middle,old):
+    """
+    Fits lines for young, middle-aged, and old animals' spatial memory data
+    :param y: predictions of young performance
+    :param m: predictions of middle-aged performance
+    :param o: predictions of old performance
+    :param young: actual young performance
+    :param middle: actual middle performance
+    :param old: actual old performance
+    :return: None
+    """
     xs = np.linspace(0,30,100)
     plt.scatter(range(1,25),young.groupby('Trial').mean()['Water Maze CIPL'],color='black', edgecolors='black', s=30, marker='o',
                 label="young average trial performance")

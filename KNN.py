@@ -33,6 +33,7 @@ def plot_classifications(data,responses,title='Plot',marker='o',col=None,accurac
     :param marker: marker type (default is dot)
     :param col: sequence of coloring for marker outline
     :param accuracy: accuarcy measure to be reported on the graph
+    :param k: value for k to put in the title
     :return: None
     """
     colors = ['#020202' if rat == 6 else '#676767' if rat == 15 else '#f9f9f9' for rat in list(responses)]

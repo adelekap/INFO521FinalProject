@@ -12,6 +12,15 @@ from sklearn.naive_bayes import MultinomialNB
 
 
 def plot_nb_results(model,xx,yy,cv,title):
+    """
+    Plots the results of the naive bayes
+    :param model: naive bayes model
+    :param xx: meshgrid of xs
+    :param yy: meshgrid of ys
+    :param cv: cross validation values
+    :param title: title of plot
+    :return: None
+    """
     fig = plt.figure()
     fig.figsize = (16, 12)
     ax = plt.gca()

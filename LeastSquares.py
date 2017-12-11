@@ -58,6 +58,13 @@ def plot_fit_3D(intercept, coefficients,x_range,x_train,y_train,title='regPlot',
     plt.show()
 
 def fit_2D(X,y,title):
+    """
+    Fits data for a single feature
+    :param X: feature data
+    :param y: responses
+    :param title: plot title
+    :return: None
+    """
     X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1)
 
     linreg = LinearRegression()
@@ -69,6 +76,16 @@ def fit_2D(X,y,title):
 
 
 def plot_2d(X,y,intercept,coefs,title,dir='Results/Regression/OrdinaryLeastSquares/'):
+    """
+    Plots output of linear model with one feature
+    :param X: feature data
+    :param y: responses
+    :param intercept: y intercept
+    :param coefs: coefficients
+    :param title: plot title
+    :param dir: directory to save plot in
+    :return: None
+    """
     #print(np.mean(cross_val_score(linreg,X_test,y_test,cv=11))) ToDo: Figure out cross validation
     xs = np.linspace(0, 30, 1000)
     plt.scatter(X,y)

@@ -7,7 +7,7 @@ This module extracts and cleans the data from the csvs.
 dataDir = 'Data/'
 
 # ||| WORKING MEMORY DATA |||
-wmData = pd.read_csv(dataDir+'CAS_WorkingMemory.csv')[['Rat ID','Age','Trial','Platform : CIPL']]
+wmData = pd.read_csv(dataDir+'CASWorkingMemory.csv')[['Rat ID','Age','Trial','Platform : CIPL']]
 wmData.columns = ['Rat ID','Age','Trial','Working Memory CIPL']
 wmData = wmData[wmData['Trial'].isin(range(2,20,2))] # We only want the retention trial data
 # Trials 2,4,and 6 are 30 second delay
@@ -23,7 +23,7 @@ rats = list(wmData['Rat ID'].unique())
 
 
 # ||| WATER MAZE DATA |||
-wmazeDataAll = pd.read_csv(dataDir+'CAS_Watermaze.csv')[['Rat ID','Age','Trial','CIPL (m*sec)','TrialType']]
+wmazeDataAll = pd.read_csv(dataDir+'CASWatermaze.csv')[['Rat ID','Age','Trial','CIPL (m*sec)','TrialType']]
 # We only want the spatial test data
 wmazeData = (wmazeDataAll[wmazeDataAll['TrialType'] == 'Spatial'])[['Rat ID','Age','Trial','CIPL (m*sec)']]
 wmazeData.columns = ['Rat ID','Age','Trial','Water Maze CIPL']
