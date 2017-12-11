@@ -17,7 +17,7 @@ This csv has the water maze task data.
 This csv has the working memory task data.
 
 
-`data.py
+`data.py`
 This module houses the dataframes required for training and testing models.
 
 
